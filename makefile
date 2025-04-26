@@ -1,7 +1,7 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -I/opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
-LDFLAGS = -L/opt/homebrew/Cellar/sdl2/2.32.4/lib -lSDL2
+CXXFLAGS = -std=c++11 -I/opt/homebrew/include/SDL2
+LDFLAGS = -L/opt/homebrew/lib -lSDL2 -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lm
 
 main: main.cpp
-	$(CXX) main.cpp $(CXXFLAGS) $(LDFLAGS) -o mygame
+	$(CXX) $(CXXFLAGS) main.cpp $(LDFLAGS) -o mygame
 
